@@ -1,3 +1,5 @@
+#TIME COMPLEXCITY : BEST/AVG/WORST CASE: O(n2)
+
 #Selection Sort : In Selection Sort we take 1st position as min value and compare to the large value and swapped only those positions, Then move to 2nd position again compare to large value and swapped. 
 
 a= [13,8,-5,16,4] #Input array or List
