@@ -1,3 +1,4 @@
+#Time Complexcity : Best= O(n) /Average/Worst CASE = O(n2) : IN 2 CASE
 # Insertion  sort
 a= [8,3,0,-2,5] #Input array or List
 print("Input",a)
