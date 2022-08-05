@@ -1,0 +1,42 @@
+#Selection Sort : In Selection Sort we take 1st position as min value and compare to the large value and swapped only those positions, Then move to 2nd position again compare to large value and swapped. 
+
+a= [13,8,-5,16,4] #Input array or List
+n= len(a)
+print("Given array,",a)
+for i in range(n-1):
+    minPos=i #Take Min Value At First Pos
+    for j in range(i+1,n):
+        if a[j]<a[minPos]:
+            minPos=j
+    a[minPos],a[i]=a[i],a[minPos]
+    print("Array After Iteration :",a)
+print(a)
+                ** END **    
+
+'''#OUTPUT :
+Given array, [13, 8, -5, 16, 4]
+Array After Iteration : [-5, 8, 13, 16, 4] 
+Array After Iteration : [-5, 4, 13, 16, 8]
+Array After Iteration : [-5, 4, 8, 16, 13]
+Array After Iteration : [-5, 4, 8, 13, 16]
+[-5, 4, 8, 13, 16]
+'''
+
+#***STEPS For Sorting ***
+
+# Find MinPosition AND Min Array :
+#a= [13,8,-5,16,4]   #Input array or List
+# print("Input",a)
+# minPos=0
+# for i in range(1,len(a)):
+#     if a[i]<a[minPos]:
+#         minPos=i
+# print(a[minPos],minPos)
+# a[minPos],a[0]=a[0],a[minPos]
+# print("Print Min Position And MinArray",a)
+
+'''#OUTPUT 
+Input [13, 8, -5, 16, 4]
+-5 2
+'''
+Print Min Position And MinArray [-5, 8, 13, 16, 4]
