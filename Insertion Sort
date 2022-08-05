@@ -1,0 +1,25 @@
+# Insertion  sort
+a= [8,3,0,-2,5] #Input array or List
+print("Input",a)
+n=len(a)
+for i in range(n-1): # Loop through the array one time less than the length of the list
+    if a[i]<=a[i+1]: # Compare neighbour elements and continue until they are in Order
+        continue
+    j = i+1
+    t = a[j]
+    while j>=1 and a[j-1]>t: # Loop through the array till elements are greater than t
+          a[j] = a[j-1]
+          j-=1
+    a[j]=t
+    print("array after ", i+1,"Iteration",a)
+print("Sorted Array",a )
+
+
+
+#OutPUT : 
+Input [8, 3, 0, -2, 5]
+array after  1 Iteration [3, 8, 0, -2, 5]
+array after  2 Iteration [0, 3, 8, -2, 5]
+array after  3 Iteration [-2, 0, 3, 8, 5]
+array after  4 Iteration [-2, 0, 3, 5, 8]
+Sorted Array [-2, 0, 3, 5, 8]
