@@ -1,0 +1,23 @@
+''' if element is at pos=x and [x=0]
+its Left Child will be at 2x(2*0=0)
+or Right Child at 2x+1(2*x+1 =0+1=1)
+that's why we can't take 0'position in Heap '''
+
+a = [9,5,8,7,10]
+print('Normal Array : ',a)
+n=len(a)
+heap=[0]*(n+1)
+print(heap)
+for i in range(n):      #start from 0 to n, and i pos 1 se bdega
+    heap[i+1]=a[i]
+    pos=i+1          #Heap ka position 1 aur array ka pos 0
+    while True:
+        parentPos=pos//2    #Parent ka pta Pos of heap//2 kar k ayega
+        if parentPos<=0:
+            break
+        if heap[parentPos]>=heap[pos]:      #agar heap ka parent value bda hai heap ke position value se
+            break
+        heap[parentPos],heap[pos]=heap[pos],heap[parentPos]
+        pos=parentPos       #heapPosition me heap Ka ParentPosition aa jayega
+    print(heap) #To know About all steps,otherwise we can comment it.
+print('Max Heap: ',heap)
